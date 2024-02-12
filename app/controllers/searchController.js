@@ -1,8 +1,8 @@
 
 const searchController = {
-  searchPage: (req, res) => {
-    res.render('search');
-  }
+    searchPage: (req, res) => {
+        res.render("search");
+    }
 
 };
 
