@@ -12,10 +12,10 @@ const dataMapper = {
     return result.rows;
   },
   async findCardElement(element) {
-    const query = "SELECT * FROM card WHERE element=$1";
+    const query = "SELECT * FROM card WHERE element=$1 IS NOT NULL";
     const result = await database.query(query, [element]);
     return result.rows;
-  },
+  }
 };
 
 module.exports = dataMapper;
