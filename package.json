@@ -4,7 +4,7 @@
   "description": "Triple Triad est un jeu de plateau à base de cartes, inventé par SquareEnix et présent dans Final Fantasy 8.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon i",
     "lint": "eslint . --fix"
   },
   "repository": {
