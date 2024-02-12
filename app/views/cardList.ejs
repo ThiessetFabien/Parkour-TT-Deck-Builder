@@ -11,16 +11,14 @@
         src="/visuals/<%= card.visual_name %>"
         alt="<%= card.name %> illustration"
       />
-      <p 
-      class="cardName">
-      <%= card.name %>
-    </p>
+      <p class="cardName"><%= card.name %></p>
     </a>
-    <a 
-      class="link--addCard" 
-      title="Ajouter au deck" 
-      href="/card/<%= card.id %>">
-    [ + ]
+    <a
+      class="link--addCard"
+      title="Ajouter au deck"
+      href="/card/<%= card.id %>"
+    >
+      [ + ]
     </a>
   </div>
 
