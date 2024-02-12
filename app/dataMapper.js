@@ -10,6 +10,11 @@ const dataMapper = {
         const query = "SELECT * FROM card WHERE id=$1";
         const result = await database.query(query, [id]);
         return result.rows;
+    },
+    async getSearch(searchTerm) {
+        const query = "SELECT * FROM cards WHERE name ILIKE $1";
+        const result = await database.query(query);
+        return result.rows;
     }
 };
 

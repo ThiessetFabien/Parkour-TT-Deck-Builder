@@ -1,9 +1,21 @@
+const dataMapper = require("../dataMapper.js");
 
 const searchController = {
-    searchPage: (req, res) => {
-        res.render("search");
+    searchPage: async (req, res) => {
+        try {
+            const searchTerm = req.params.q;
+            const result = await dataMapper.search(searchTerm);
+            if (!result.length === 0) {
+                res.status(200).send("Aucun résultat trouvé pour la recherche : " + searchTerm);
+            } else {
+                console.log(result);
+                res.render("search", { result });
+            }
+        } catch (error) {
+            console.error(error, "Erreur lors de l'affichage de la recherche");
+            res.status(500).send("Erreur lors de l'affichage de la recherche");
+        }
     }
-
 };
 
 module.exports = searchController;

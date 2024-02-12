@@ -23,16 +23,16 @@ const mainController = {
                 res
                     .status(404)
                     .send("Carte non trouvée");
-                } else {
-                    console.log(card)
+            } else {
+                console.log(card);
                 res.render("showCard", {card: card});
             }
         } catch (error) {
             console.error(error, "Erreur d'affichage d'une carte");
             res
-                .status(500)
+                .status(500);
         }
-    }
+    },
 };
 
 module.exports = mainController;
