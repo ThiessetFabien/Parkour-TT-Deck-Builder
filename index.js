@@ -15,8 +15,9 @@ app.use(express.static("public"));
 app.use(session({
     resave: true,
     saveUninitialized: true,
-    secret: process.env.SESSION_KEY,
+    secret: "Guess it!",
     cookie: {
+        secure: false,
         maxAge: (1000 * 60 * 60) // ça fait une heure
     }
 }));

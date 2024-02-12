@@ -7,7 +7,7 @@ const dataMapper = {
         return result.rows;
     },
     async getCard(id) {
-        const query = "SELECT * FROM card WITH id=$1";
+        const query = "SELECT * FROM card WHERE id=$1";
         const result = await database.query(query, [id]);
         return result.rows;
     }

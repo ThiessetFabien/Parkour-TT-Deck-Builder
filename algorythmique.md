@@ -8,6 +8,11 @@
 
 ## 1 détail d'une carte
     + depuis l'accueil, quand on clique sur un carte, on veut voir le détail
+      + getCard dans dataMapper
+      + dataMapper.getCard dans mainController
+      + passe une vue ejs (à créer)
+      + route paramétrée
+      + remplacer les href de la homePage
     KISS
 
 ## recherche
